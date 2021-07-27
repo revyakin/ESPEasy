@@ -3,6 +3,8 @@
 
 #include "../../ESPEasy_common.h"
 
+#define USES_P250
+
 /*
 #################################################
  This is the place where plugins are registered
