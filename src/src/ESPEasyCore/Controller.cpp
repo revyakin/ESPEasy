@@ -630,8 +630,8 @@ void SensorSendTask(taskIndex_t TaskIndex)
           if (ExtraTaskSettings.TaskDeviceFormula[varNr][0] != 0)
           {
             String formula = ExtraTaskSettings.TaskDeviceFormula[varNr];
-            formula.replace(F("%pvalue%"), String(preValue[varNr]));
-            formula.replace(F("%value%"),  String(UserVar[TempEvent.BaseVarIndex + varNr]));
+            formula.replace(F("%pvalue%"), String(preValue[varNr], 10));
+            formula.replace(F("%value%"),  String(UserVar[TempEvent.BaseVarIndex + varNr], 10));
             double result = 0;
 
             if (!isError(Calculate(formula, result))) {
